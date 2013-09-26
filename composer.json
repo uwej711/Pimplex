@@ -1,0 +1,30 @@
+{
+    "name": "valiton/container",
+    "description": "Pimple with providers for symfomny components",
+    "type": "library",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Uwe Jäger",
+            "email": "uwe.jaeger@valiton.com"
+        }
+    ],
+    "require": {
+        "symfony/form": ">=2.3,<2.4-dev",
+        "symfony/validator": ">=2.3,<2.4-dev",
+        "symfony/http-foundation": ">=2.3,<2.4-dev",
+        "symfony/templating": ">=2.3,<2.4-dev",
+        "symfony/twig-bridge": ">=2.3,<2.4-dev",
+        "symfony/monolog-bridge": ">=2.3,<2.5-dev",
+        "monolog/monolog": "~1.4,>=1.4.1",
+        "pimple/pimple": "1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": { "Valiton\\Container": "" }
+    },
+    "target-dir": "Valiton/Container"
+}
