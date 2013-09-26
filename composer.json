@@ -2,7 +2,7 @@
     "name": "valiton/container",
     "description": "Pimple with providers for symfomny components",
     "type": "library",
-    "minimum-stability": "dev",
+    "license": "MIT",
     "authors": [
         {
             "name": "Uwe Jäger",
