@@ -36,14 +36,14 @@ class ValidatorServiceProvider implements ServiceProviderInterface
                 }
 
                 return new Validator(
-                    $container['validator.mcontainering.class_metadata_factory'],
+                    $container['validator.mapping.class_metadata_factory'],
                     $container['validator.validator_factory'],
                     isset($container['translator']) ? $container['translator'] : new DefaultTranslator()
                 );
             }
         );
 
-        $container['validator.mcontainering.class_metadata_factory'] = $container->share(
+        $container['validator.mapping.class_metadata_factory'] = $container->share(
             function ($container)
             {
                 return new ClassMetadataFactory(new StaticMethodLoader());

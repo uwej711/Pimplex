@@ -6,7 +6,7 @@
  */
 namespace Valiton\Container\Tests\ServiceProvider;
 
-use Valiton\Container\ServiceProvider\TwigServicePRovider;
+use Valiton\Container\ServiceProvider\TwigServiceProvider;
 use Valiton\Container\Tests\ContainerTest;
 
 class TwigServiceProviderTest extends ContainerTest

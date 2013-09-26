@@ -15,7 +15,7 @@ use Symfony\Bridge\Twig\Form\TwigRendererEngine;
 use Valiton\Container\Container;
 use Valiton\Container\ServiceProviderInterface;
 
-class TwigServicePRovider implements ServiceProviderInterface
+class TwigServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {
