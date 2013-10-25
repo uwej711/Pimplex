@@ -1,21 +1,14 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\ServiceProvider;
+namespace Pimplex\ServiceProvider;
 
 use Symfony\Component\Translation\Loader\ArrayLoader;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
 use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\Translator;
-use Valiton\Container\Container;
-use Valiton\Container\ServiceProviderInterface;
 
-class TranslationServiceProvider implements ServiceProviderInterface
+class TranslationServiceProvider
 {
-    public function register(Container $container)
+    public function register(\Pimple $container)
     {
         $container['translator'] = $container->share(function ($container) {
                 $translator = new Translator($container['locale'], $container['translator.message_selector']);

@@ -1,10 +1,5 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\ServiceProvider;
+namespace Pimplex\ServiceProvider;
 
 use Symfony\Component\Form\Extension\Csrf\CsrfExtension;
 use Symfony\Component\Form\Extension\Csrf\CsrfProvider\DefaultCsrfProvider;
@@ -13,12 +8,10 @@ use Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationExtension;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension as FormValidatorExtension;
 
 use Symfony\Component\Form\Forms;
-use Valiton\Container\Container;
-use Valiton\Container\ServiceProviderInterface;
 
-class FormServiceProvider implements ServiceProviderInterface
+class FormServiceProvider
 {
-    public function register(Container $container)
+    public function register(\Pimple $container)
     {
         if (!class_exists('Locale') && !class_exists('Symfony\Component\Locale\Stub\StubLocale')) {
             throw new \RuntimeException('You must either install the PHP intl extension or the Symfony Locale Component to use the Form extension.');

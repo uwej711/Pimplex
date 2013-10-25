@@ -1,22 +1,15 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\ServiceProvider;
+namespace Pimplex\ServiceProvider;
 
 use Symfony\Component\Validator\ConstraintValidatorFactory;
 use Symfony\Component\Validator\DefaultTranslator;
 use Symfony\Component\Validator\Mapping\ClassMetadataFactory;
 use Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader;
 use Symfony\Component\Validator\Validator;
-use Valiton\Container\Container;
-use Valiton\Container\ServiceProviderInterface;
 
-class ValidatorServiceProvider implements ServiceProviderInterface
+class ValidatorServiceProvider
 {
-    public function register(Container $container)
+    public function register(\Pimple $container)
     {
         $container['validator'] = $container->share(
             function ($container)

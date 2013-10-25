@@ -1,13 +1,8 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\Tests\ServiceProvider;
+namespace Pimplex\Tests\ServiceProvider;
 
-use Valiton\Container\ServiceProvider\FormServiceProvider;
-use Valiton\Container\Tests\ContainerTest;
+use Pimplex\ServiceProvider\FormServiceProvider;
+use Pimplex\Tests\ContainerTest;
 
 class FormServiceProviderTest extends ContainerTest
 {

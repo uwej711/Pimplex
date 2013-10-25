@@ -1,10 +1,5 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\ServiceProvider;
+namespace Pimplex\ServiceProvider;
 
 use Symfony\Bridge\Twig\Extension\FormExtension;
 use Symfony\Bridge\Twig\Extension\RoutingExtension;
@@ -12,12 +7,10 @@ use Symfony\Bridge\Twig\Extension\SecurityExtension;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Symfony\Bridge\Twig\Form\TwigRenderer;
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
-use Valiton\Container\Container;
-use Valiton\Container\ServiceProviderInterface;
 
-class TwigServiceProvider implements ServiceProviderInterface
+class TwigServiceProvider
 {
-    public function register(Container $container)
+    public function register(\Pimple $container)
     {
         $container['twig.options'] = array();
         $container['twig.form.templates'] = array('form_div_layout.html.twig');

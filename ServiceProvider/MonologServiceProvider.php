@@ -1,20 +1,13 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\ServiceProvider;
+namespace Pimplex\ServiceProvider;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Symfony\Bridge\Monolog\Handler\DebugHandler;
-use Valiton\Container\Container;
-use Valiton\Container\ServiceProviderInterface;
 
-class MonologServiceProvider implements ServiceProviderInterface
+class MonologServiceProvider
 {
-    public function register(Container $container)
+    public function register(\Pimple $container)
     {
         $container['logger'] = function () use ($container) {
             return $container['monolog'];

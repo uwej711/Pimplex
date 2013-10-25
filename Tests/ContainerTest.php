@@ -1,12 +1,7 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\Tests;
+namespace Pimplex\Tests;
 
-use Valiton\Container\Container;
+use Pimplex\Container;
 
 class ContainerTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,5 +21,11 @@ class ContainerTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('baz', $foo['bar']);
     }
 
+    public function testOverwriteParameters()
+    {
+        $container = new Container(array('locale' => 'de'));
+
+        $this->assertSame('de', $container['locale']);
+    }
 
 }

@@ -1,12 +1,12 @@
 {
-    "name": "valiton/container",
-    "description": "Pimple with providers for symfomny components",
+    "name": "uwej711/pimplex",
+    "description": "Providers for symfony components for Pimple",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Uwe Jäger",
-            "email": "uwe.jaeger@valiton.com"
+            "email": "uwej711@googlemail.com"
         }
     ],
     "require": {
@@ -24,7 +24,7 @@
     },
     "minimum-stability": "stable",
     "autoload": {
-        "psr-0": { "Valiton\\Container": "" }
+        "psr-0": { "Pimplex": "" }
     },
-    "target-dir": "Valiton/Container"
+    "target-dir": "Pimplex"
 }

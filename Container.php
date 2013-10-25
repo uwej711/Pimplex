@@ -1,10 +1,5 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container;
+namespace Pimplex;
 
 class Container extends \Pimple
 {
@@ -12,14 +7,11 @@ class Container extends \Pimple
 
     public function __construct(array $values = array())
     {
-        parent::__construct($values);
-        $this['debug'] = false;
-        $this['charset'] = 'UTF-8';
-        $this['locale'] = 'en';
+        parent::__construct(array_merge(array('debug' => false, 'charset' => 'UTF-8', 'locale' => 'en'), $values));
+
     }
 
-
-    public function register(ServiceProviderInterface $provider, array $values = array())
+    public function register($provider, array $values = array())
     {
         $this->providers[] = $provider;
 

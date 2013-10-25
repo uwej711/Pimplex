@@ -1,13 +1,9 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\Tests\ServiceProvider;
 
-use Valiton\Container\ServiceProvider\MonologServiceProvider;
-use Valiton\Container\Tests\ContainerTest;
+namespace Pimplex\Tests\ServiceProvider;
+
+use Pimplex\ServiceProvider\MonologServiceProvider;
+use Pimplex\Tests\ContainerTest;
 
 class MonologServiceProviderTest extends ContainerTest
 {

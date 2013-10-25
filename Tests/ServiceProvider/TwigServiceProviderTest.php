@@ -1,13 +1,9 @@
 <?php
-/**
- * www.valiton.com
- *
- * @author Uwe Jäger <uwe.jaeger@valiton.com>
- */
-namespace Valiton\Container\Tests\ServiceProvider;
 
-use Valiton\Container\ServiceProvider\TwigServiceProvider;
-use Valiton\Container\Tests\ContainerTest;
+namespace Pimplex\Tests\ServiceProvider;
+
+use Pimplex\ServiceProvider\TwigServiceProvider;
+use Pimplex\Tests\ContainerTest;
 
 class TwigServiceProviderTest extends ContainerTest
 {
