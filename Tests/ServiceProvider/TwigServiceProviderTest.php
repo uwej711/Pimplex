@@ -25,4 +25,14 @@ class TwigServiceProviderTest extends ContainerTest
         $this->assertSame('Hello World!', $this->container['twig']->render('template.twig', array('name' => 'World')));
     }
 
+    public function testPlainPimple()
+    {
+        $container = new \Pimple();
+        $twigServiceProvider = new TwigServiceProvider();
+        $twigServiceProvider->register($container);
+
+        $this->assertTrue(isset($this->container['twig']));
+        $this->assertInstanceOf('\Twig_Environment', $this->container['twig']);
+    }
+
 }
