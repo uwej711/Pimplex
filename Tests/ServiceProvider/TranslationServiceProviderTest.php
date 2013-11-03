@@ -12,7 +12,7 @@ class TranslationServiceProviderTest extends ContainerTest
         $this->container->register(new TranslationServiceProvider());
     }
 
-    public function testTranslator()
+    public function testProperClassIsProvided()
     {
         $this->assertTrue(isset($this->container['translator']));
         $this->assertInstanceOf('Symfony\Component\Translation\Translator', $this->container['translator']);

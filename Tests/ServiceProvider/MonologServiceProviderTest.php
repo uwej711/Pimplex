@@ -13,7 +13,7 @@ class MonologServiceProviderTest extends ContainerTest
         $this->container->register(new MonologServiceProvider(), array('monolog.logfile' => 'debug.log'));
     }
 
-    public function testMonolog()
+    public function testProperClassIsProvided()
     {
         $this->assertTrue(isset($this->container['logger']));
         $this->assertInstanceOf('Psr\Log\LoggerInterface', $this->container['logger']);

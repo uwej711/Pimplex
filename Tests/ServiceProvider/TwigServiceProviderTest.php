@@ -13,7 +13,7 @@ class TwigServiceProviderTest extends ContainerTest
         $this->container->register(new TwigServiceProvider());
     }
 
-    public function testTwig()
+    public function testProperClassIsProvided()
     {
         $this->assertTrue(isset($this->container['twig']));
         $this->assertInstanceOf('\Twig_Environment', $this->container['twig']);

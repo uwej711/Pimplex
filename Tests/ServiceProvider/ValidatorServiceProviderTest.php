@@ -12,7 +12,7 @@ class ValidatorServiceProviderTest extends ContainerTest
         $this->container->register(new ValidatorServiceProvider());
     }
 
-    public function testValidator()
+    public function testProperClassIsProvided()
     {
         $this->assertTrue(isset($this->container['validator']));
         $this->assertInstanceOf('Symfony\Component\Validator\Validator', $this->container['validator']);

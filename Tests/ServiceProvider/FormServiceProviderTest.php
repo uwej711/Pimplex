@@ -12,7 +12,7 @@ class FormServiceProviderTest extends ContainerTest
         $this->container->register(new FormServiceProvider());
     }
 
-    public function testForm()
+    public function testProperClassIsProvided()
     {
         $this->assertTrue(isset($this->container['form.factory']));
         $this->assertInstanceOf('Symfony\Component\Form\FormFactory', $this->container['form.factory']);
