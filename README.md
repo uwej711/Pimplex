@@ -1,10 +1,11 @@
-Pimple with ServiceProviders for several Symfony 2 components
-=============================================================
+ServiceProviders for Pimple for Symfony 2 components
+====================================================
 
-This library add ServiceProviders to Pimple to use some Symfony 2 components.
+This library contains ServiceProviders for Pimple to use Symfony 2 components.
 
-Inspired by Silex but for use cases where you don't need the full (micro) framework,
-e.g. for adding Symfony Components to an existing PHP application.
+The code for the providers was taken from Silex and modified to work with plain Pimple
+for use cases where you don't need the full (micro) framework,
+e.g. for adding Symfony Components to an existing PHP application. See the LICENSE file.
 
 Usage:
 
